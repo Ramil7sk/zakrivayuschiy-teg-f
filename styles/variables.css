@@ -1,1 +1,29 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "PressStart2P", monospace;
+  --font-weight-normal: 410;
+  --font-weight-bold: 715;
+  --gradient-horizontal:repeating-linear-gradient(
+    to right,
+    #d3d3d3 0,
+    #d3d3d3 2px,
+    transparent 2px 4px
+  );
+  --gradient-vertical: repeating-linear-gradient(
+    to bottom,
+    #d3d3d3 0,
+    #d3d3d3 2px,
+    transparent 2px 4px
+  );
+
+  --gradient-saturation: linear-gradient(
+    to bottom,
+    #e7e7e7 0%,
+    #e7e7e7 0.01%,
+    #1a1a1a 100%
+  );
+
+  --gradient-body: var(--gradient-horizontal), var(--gradient-vertical), var(--gradient-saturation);
+  
+}
