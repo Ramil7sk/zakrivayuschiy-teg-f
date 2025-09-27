@@ -19,3 +19,38 @@
   background-attachment: fixed;
   background-size: cover;
 }
+
+.container {
+  max-inline-size: var(--block-size);
+  margin: 0 auto;
+  border: 1px solid var(--color-primary);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-secondary);
+  font-family: var(--font-secondary);
+  padding-block: clamp(7.625rem, 7.0481rem + 2.4615vw, 8.125rem);;
+}
+
+.header-card {
+  margin-block: 100px;
+}
+
+.header__logo {
+  margin-block-end: 20px;
+}
+
+.header__logo-text {
+  display: block;
+  font-size: clamp(3.063rem, 4.923vw + 1.909rem, 4.063rem);
+  max-width: max-content;
+}
+
+.header__title {
+  font-size: clamp(0.875rem, 2.769vw + 0.226rem, 1.438rem);
+  text-transform: uppercase;
+}
