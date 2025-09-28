@@ -4,6 +4,7 @@
   --font-secondary: "Press Start 2P", monospace;
   --font-weight-normal: 410;
   --font-weight-bold: 715;
+  --font-size: 18px;
   --gradient-horizontal:repeating-linear-gradient(
     to right,
     #d3d3d3 0,

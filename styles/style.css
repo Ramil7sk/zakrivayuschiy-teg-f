@@ -15,6 +15,7 @@
   min-block-size: 100dvb;
   font-family: var(--font-primary);
   font-variation-settings: "wght" var(--font-weight-normal, 410);
+  font-size: var(--font-size);
   background-image: var(--gradient-body);
   background-attachment: fixed;
   background-size: cover;
@@ -23,7 +24,6 @@
 .container {
   max-inline-size: var(--block-size);
   margin: 0 auto;
-  border: 1px solid var(--color-primary);
 }
 
 .header {
@@ -38,6 +38,7 @@
 
 .header-card {
   margin-block: 100px;
+  border: 2px solid var(--color-primary);
 }
 
 .header__logo {
@@ -53,4 +54,99 @@
 .header__title {
   font-size: clamp(0.875rem, 2.769vw + 0.226rem, 1.438rem);
   text-transform: uppercase;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  border: 1px solid var(--color-primary);
+  margin-block-end: 100px;
+}
+
+.card {
+  position: relative;
+  background-color: var(--color-secondary);
+  border: 2px solid var(--color-primary);
+}
+
+.card__title {
+  font-size: var(--font-size);
+  font-variation-settings: "wght" var(--font-weight-bold);
+  padding: 4px 10px;
+}
+
+.card__image {
+  inline-size: 100%;
+  display: flex;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  flex: 1;
+  aspect-ratio: 1/1;
+}
+
+.card__logo {
+  position: absolute;
+  top: 50px;
+  right: 25px;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+}
+
+.card__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 25px;
+}
+
+.card__actions {
+  display: flex;
+  justify-content: end;
+  gap: 7px;
+  padding: 0 25px 20px;
+}
+
+.card__actions button {
+  background-color: transparent;
+}
+
+.card__like-button {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  padding: 12.5px 37px;
+  border: 2px solid var(--color-primary);
+}
+
+.card__icon-button {
+  border: none;
+}
+
+.save {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.save__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 18px;
+
+}
+
+.save__icon {
+  display: flex;
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+.button__text {
+  display: block;
+  font-family: var(--font-secondary);
+  font-size: 14px;
 }
