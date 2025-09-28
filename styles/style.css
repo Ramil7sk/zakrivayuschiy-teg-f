@@ -116,7 +116,7 @@
   background-color: transparent;
 }
 
-.card__like-button {
+.button {
   font-family: var(--font-secondary);
   font-size: 14px;
   padding: 12.5px 37px;
@@ -140,7 +140,6 @@
   gap: 8px;
   width: fit-content;
   padding: 18px;
-
 }
 
 .save__icon {
