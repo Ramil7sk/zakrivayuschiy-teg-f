@@ -86,12 +86,16 @@
   aspect-ratio: 1/1;
 }
 
-.card__logo {
+.card__label {
   position: absolute;
   top: 50px;
   right: 25px;
   font-family: var(--font-secondary);
   font-size: 14px;
+  mix-blend-mode: hard-light;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  opacity: 0.9;
 }
 
 .card__text-content {
@@ -149,4 +153,15 @@
   display: block;
   font-family: var(--font-secondary);
   font-size: 14px;
+}
+
+@supports (
+  (-webkit-text-stroke: 1px var(--color-secondary)) or
+    (text-stroke: 1px var(--color-secondary))
+) {
+  .card__label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--color-secondary);
+    text-stroke: 1px var(--color-secondary);
+  }
 }
