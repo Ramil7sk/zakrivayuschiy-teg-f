@@ -117,10 +117,12 @@
 }
 
 .button {
+  position: relative;
   font-family: var(--font-secondary);
   font-size: 14px;
   padding: 12.5px 37px;
   border: 2px solid var(--color-primary);
+  transition: box-shadow 0.3s ease;
 }
 
 .card__icon-button {
@@ -220,6 +222,36 @@ body:has(.dialog[open]) .dialog__form {
 
 .multiple {
   filter: saturate(250%) contrast(200%) brightness(110%);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--color-primary);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.button span {
+  position: relative;
+  z-index: 1;
+  color: var(--color-secondary);
+  mix-blend-mode: difference;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
 }
 
 @supports (
