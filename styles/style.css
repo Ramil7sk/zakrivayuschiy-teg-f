@@ -154,6 +154,42 @@
   font-size: 14px;
 }
 
+.dialog {
+  display: none;
+}
+
+body:has(.dialog[open]) .dialog{
+  display: block;
+}
+
+body:has(.dialog[open]) .dialog__form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dialog[open]::backdrop{
+  backdrop-filter: blur(10px);
+}
+
+.dialog__wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.dialog__title {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  max-inline-size: 234px;
+  line-height: 150%;
+}
+
+.dialog__icon {
+  inline-size: 39px;
+  block-size: 39px;
+}
+
 @supports (
   (-webkit-text-stroke: 1px var(--color-secondary)) or
     (text-stroke: 1px var(--color-secondary))
