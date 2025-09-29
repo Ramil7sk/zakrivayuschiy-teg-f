@@ -190,6 +190,38 @@ body:has(.dialog[open]) .dialog__form {
   block-size: 39px;
 }
 
+.sepia {
+  filter: sepia(100%);
+}
+
+.brightness {
+  filter: brightness(150%);
+}
+
+.grayscale {
+  filter: grayscale(80%);
+}
+
+.blur {
+  filter: blur(2px);
+}
+
+.contrast {
+  filter: contrast(150%);
+}
+
+.hue-rotate {
+  filter: hue-rotate(90deg);
+}
+
+.saturate {
+  filter: saturate(200%);
+}
+
+.multiple {
+  filter: saturate(250%) contrast(200%) brightness(110%);
+}
+
 @supports (
   (-webkit-text-stroke: 1px var(--color-secondary)) or
     (text-stroke: 1px var(--color-secondary))
