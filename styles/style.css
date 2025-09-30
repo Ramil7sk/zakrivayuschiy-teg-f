@@ -60,7 +60,6 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  border: 1px solid var(--color-primary);
   margin-block-end: 100px;
 }
 
@@ -68,6 +67,10 @@
   position: relative;
   background-color: var(--color-secondary);
   border: 2px solid var(--color-primary);
+}
+
+.card__like-button {
+  max-inline-size: 130px;
 }
 
 .card__title {
@@ -109,8 +112,7 @@
 .card__actions {
   display: flex;
   justify-content: end;
-  gap: 7px;
-  padding: 0 25px 20px;
+  padding: 0 24px 20px;
 }
 
 .card__actions button {
@@ -124,10 +126,12 @@
   align-items: center;
   font-family: var(--font-secondary);
   font-size: 14px;
-  padding: 12.5px 37px;
+  padding: 11px 37px;
   border: 2px solid var(--color-primary);
   transition: box-shadow 0.3s ease;
-  max-inline-size: 130px;
+  appearance: none;
+  cursor: pointer;
+  height: fit-content;
 }
 
 .card__icon-button {
@@ -156,7 +160,8 @@
   align-items: center;
   gap: 8px;
   width: fit-content;
-  padding: 18px;
+  padding: 16px;
+  inline-size: fit-content;
 }
 
 .save__icon {
@@ -169,6 +174,8 @@
   display: block;
   font-family: var(--font-secondary);
   font-size: 14px;
+  height: max-content;
+  line-height: 90%;
 }
 
 .dialog {
@@ -339,5 +346,22 @@ body:has(.dialog[open]) .dialog__form {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--color-secondary);
     text-stroke: 1px var(--color-secondary);
+  }
+}
+
+@media (width < 376px) {
+  .save__button {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .save__icon {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+
+  .dialog__icon {
+    inline-size: 39px;
+    block-size: 39px;
   }
 }
