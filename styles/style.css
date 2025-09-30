@@ -182,7 +182,7 @@
   display: none;
 }
 
-body:has(.dialog[open]) .dialog{
+body:has(.dialog[open]) .dialog {
   display: block;
 }
 
@@ -192,7 +192,7 @@ body:has(.dialog[open]) .dialog__form {
   gap: 30px;
 }
 
-.dialog[open]::backdrop{
+.dialog[open]::backdrop {
   backdrop-filter: blur(10px);
 }
 
@@ -304,7 +304,7 @@ body:has(.dialog[open]) .dialog__form {
   transition-delay: 0.05s;
 }
 
-.like-icon:active .main-body{
+.like-icon:active .main-body {
   fill: var(--animation-fill-color);
   transition-delay: 0.05s;
 }
@@ -314,7 +314,7 @@ body:has(.dialog[open]) .dialog__form {
   transition-delay: 0s;
 }
 
-.like-icon.is-liked .main-body{
+.like-icon.is-liked .main-body {
   fill: var(--animation-fill-color);
   transition-delay: 0.05s;
 }
