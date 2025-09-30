@@ -29,5 +29,6 @@
   --block-size: clamp(23.438rem, 100vw + 0rem, 43.75rem);
   --color-primary: #000000;
   --color-secondary: #FFFFFF;
-  
+  --heart-contour-color: black;
+  --animation-fill-color: #FF0000
 }

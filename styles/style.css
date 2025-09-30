@@ -96,6 +96,7 @@
   color: var(--color-primary);
   text-transform: uppercase;
   opacity: 0.9;
+  z-index: 1;
 }
 
 .card__text-content {
@@ -118,11 +119,15 @@
 
 .button {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: var(--font-secondary);
   font-size: 14px;
   padding: 12.5px 37px;
   border: 2px solid var(--color-primary);
   transition: box-shadow 0.3s ease;
+  max-inline-size: 130px;
 }
 
 .card__icon-button {
@@ -262,6 +267,68 @@ body:has(.dialog[open]) .dialog__form {
 
 .button:hover::before {
   transform: scaleX(1);
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.contour {
+  transition: fill 0.1s linear;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .core {
+  fill: var(--color-primary);
+  transition-delay: 0s;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--color-primary);
+  transition-delay: 0.05s;
+}
+
+.like-icon:active .main-body{
+  fill: var(--animation-fill-color);
+  transition-delay: 0.05s;
+}
+
+.like-icon:active .core {
+  fill: var(--animation-fill-color);
+  transition-delay: 0s;
+}
+
+.like-icon.is-liked .main-body{
+  fill: var(--animation-fill-color);
+  transition-delay: 0.05s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+  transition-delay: 0s;
+}
+
+.like-icon.is-liked .heart {
+  animation: scaleUp 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparkLight 0.3s ease-out 0.3s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+  transition-duration: 0.3s;
+  transition-delay: 0.06s;
 }
 
 @supports (
