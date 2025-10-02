@@ -398,6 +398,7 @@ body:has(.dialog[open]) .dialog__form {
   .dialog__icon {
     inline-size: 39px;
     block-size: 39px;
+    flex-shrink: 0;
   }
 
   .header-card {
@@ -406,10 +407,6 @@ body:has(.dialog[open]) .dialog__form {
 
   .card__label {
     top: 77px;
-  }
-
-  .dialog__icon {
-    flex-shrink: 0;
   }
 
   .card__text-content {
