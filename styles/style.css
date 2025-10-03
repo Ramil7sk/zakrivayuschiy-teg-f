@@ -182,7 +182,7 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  padding: 16px;
+  padding: 15px;
   inline-size: fit-content;
   block-size: fit-content;
   color: var(--color-primary);
@@ -402,7 +402,7 @@ body:has(.dialog[open]) .dialog__form {
   }
 
   .header-card {
-    margin-block-end: 100px;
+    margin-block-end: 99px;
   }
 
   .card__label {
@@ -410,10 +410,11 @@ body:has(.dialog[open]) .dialog__form {
   }
 
   .card__text-content {
-    margin-block-end: 16px;
+    margin: 26px;
   }
 
   .dialog[open] {
     padding: 25px 31px;
   }
+
 }
